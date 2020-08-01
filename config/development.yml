@@ -1,0 +1,6 @@
+db:
+    username: ''
+    password: ''
+
+jwt:
+    secret: 'topSecret55'

@@ -1,9 +1,10 @@
 import { TypeOrmModuleOptions } from "@nestjs/typeorm";
-import { join } from "path";
+import * as config from 'config';
 
+const dbConfig = config.get('db');
 export const TypeOrmConfig: TypeOrmModuleOptions = {
-    type: 'mongodb',
-    url: 'mongodb://localhost/nest',
+    type: dbConfig.type,
+    url: `${dbConfig.host}/${dbConfig.database}`,
     entities:[__dirname + '/../**/*.entity{.ts,.js}'],
     synchronize: true,
     useNewUrlParser: true,

@@ -1,0 +1,12 @@
+server:
+    port: 3005
+
+db:
+    type: 'mongodb'
+    host: 'mongodb://localhost'
+    port: '22'
+    database: 'nest'
+
+jwt:
+    expiresIn: 3600
+    secret: 'topSecret55'
